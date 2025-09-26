@@ -1,0 +1,127 @@
+:root {
+    /* Cores principais */
+    --primaria: #212832;
+    --secundaria: #c32619;
+
+    --primaria-hover: #2a3440;
+    --secundaria-hover: #a81f15;
+
+    --primaria-transparente: rgba(33, 40, 50, 0.25);
+    --secundaria-transparente: rgba(195, 38, 25, 0.25);
+
+    /* Cores Neutrais */
+    --branco: #ffffff;
+    --branco-hover: #f0f0f0;
+    --branco-transparente: rgba(255, 255, 255, 0.1);
+
+    --preto: #000000;
+    --preto-hover: #222222;
+    --preto-transparente: rgba(0, 0, 0, 0.1);
+
+    --cinza: #5a5a5a;
+    --cinza-hover: #7a7a7a;
+    --cinza-transparente: rgba(90, 90, 90, 0.1);
+
+    --transparente: transparent;
+
+    /* Cores de Fundo */
+    --fundo-dia: #dddddd;
+    --fundo-dia-transparente: rgba(221, 221, 221, 0.1);
+    --texto-dia: #000000;
+    --texto-dia-hover: #222222;
+
+    /* Cores de Noite */
+    --fundo-noite: #212832;
+    --fundo-noite-transparente: rgba(33, 40, 50, 0.1);
+    --texto-noite: #ffffff;
+    --texto-noite-hover: #f0f0f0;
+
+    /* Cores compartilhadas */
+    --texto-link: #c32619;
+    --texto-link-hover: #a81f15;
+    --borda: #5a5a5a;
+    --borda-hover: #7a7a7a;
+
+    /* Espaços Menores */
+    --espaco-3xp: 0.1rem;
+    --espaco-2xp: 0.25rem;
+
+    /* Espaços padrão */
+    --espaco-xp: 0.5rem;
+    --espaco-p: 0.75rem;
+    --espaco-m: 1rem;
+    --espaco-g: 1.25rem;
+    --espaco-xg: 1.5rem;
+
+    /* Espaços Maiores */
+    --espaco-2xg: 2rem;
+    --espaco-3xg: 3rem;
+    
+    /* Fonte Principal */
+    --fonte-principal: 'Nunito', sans-serif;
+    --fonte-secundaria: 'Quicksand', sans-serif;
+
+    /* Fontes */
+    --fonte-xp: 0.75rem;
+    /* 12px */
+    --fonte-p: 0.875rem;
+    /* 14px */
+    --fonte-m: 1rem;
+    /* 16px */
+    --fonte-g: 1.25rem;
+    /* 20px */
+    --fonte-xg: 1.5rem;
+    /* 24px */
+    --fonte-2xg: 2rem;
+    /* 32px */
+    --fonte-3xg: 3rem;
+    /* 48px */
+
+    /* Pesos */
+    --peso-fino: 300;
+    --peso-normal: 400;
+    --peso-medio: 500;
+    --peso-negrito: 700;
+
+    /* Radios */
+    --radius-pequeno: 4px;
+    --radius: 8px;
+    --radius-grande: 16px;
+    --radius-total: 9999px; /* Para círculos */
+
+    /* Sombras */
+    --sombra-leve: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --sombra-pesada: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    /* Transições */
+    --transicao-rapida: 0.15s ease-in-out;
+    --transicao-media: 0.3s ease-in-out;
+    --transicao-lenta: 0.5s ease-in-out;
+
+    /* Z-index */
+    --z-base: 1;
+    --z-cima: 2;
+    --z-alto: 3;
+    --z-topo: 4;
+    --z-superior: 5;
+    --z-maximo: 9999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background: var(--fundo-dia);
+}
