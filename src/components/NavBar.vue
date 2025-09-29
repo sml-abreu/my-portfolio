@@ -18,10 +18,8 @@
     <transition name="fade-menu">
       <nav v-if="isMenuOpen" class="navigation-menu">
         <ul class="menu-items">
-          <li class="menu-item" :style="{ animationDelay: '0.1s' }"><a href="#sobre">Sobre</a></li>
-          <li class="menu-item" :style="{ animationDelay: '0.2s' }"><a href="#projetos">Projetos</a></li>
-          <li class="menu-item" :style="{ animationDelay: '0.3s' }"><a href="#servicos">Serviços</a></li>
-          <li class="menu-item" :style="{ animationDelay: '0.4s' }"><a href="#contato">Contato</a></li>
+          <li class="menu-item" :style="{ animationDelay: '0.1s' }"><a href="#sobre">Sobre Mim</a></li>
+          <li class="menu-item" :style="{ animationDelay: '0.2s' }"><a href="#experiencia">Experiência</a></li>
         </ul>
       </nav>
     </transition>
@@ -31,9 +29,12 @@
 <style scoped>
 header {
   background: var(--transparente);
-  padding: var(--espaco-m) var(--espaco-2xg);
-  position: relative;
-  z-index: var(--z-alto);
+  padding: var(--espaco-p) var(--espaco-2xg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-maximo);
 }
 
 .header-content {
