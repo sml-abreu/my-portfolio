@@ -7,17 +7,11 @@
       
       <div class="about-content">
         <div class="about-image">
-          <div class="image-container">
-            <img src="/about-photo.jpg" alt="Sobre mim" class="about-photo" />
-            <div class="image-decoration">
-              <div class="decoration-shape decoration-1"></div>
-              <div class="decoration-shape decoration-2"></div>
-            </div>
-          </div>
+          <img src="/about-photo.jpg" alt="Sobre mim" class="about-photo" />
         </div>
         
         <div class="about-text">
-          <h3 class="about-subtitle">Eu sou <span class="highlight">Samuel Abreu</span></h3>
+          <h3 class="about-subtitle">Olá, eu sou <span class="highlight">Samuel Abreu</span></h3>
           <h4 class="about-role">Desenvolvedor Web</h4>
           <p class="about-location">De Bahia, Brasil</p>
           
@@ -28,21 +22,6 @@
             <p>
               Com mais de 2 anos de experiência como desenvolvedor profissional, meus principais diferenciais são a criatividade no desenvolvimento, a criação de visuais atraentes e a construção de layouts totalmente responsivos.
             </p>
-          </div>
-          
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-number">2+</span>
-              <span class="stat-label">Projetos Concluídos</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">2+</span>
-              <span class="stat-label">Anos de Experiência</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">2+</span>
-              <span class="stat-label">Clientes Satisfeitos</span>
-            </div>
           </div>
           
           <div class="about-actions">
@@ -65,7 +44,7 @@ export default {
 
 <style scoped>
 .about-section {
-  padding: var(--espaco-2xg) 0;
+  padding: var(--espaco-3xg) 0;
   background: var(--branco);
   position: relative;
 }
@@ -82,7 +61,7 @@ export default {
 }
 
 .section-title {
-  font-size: var(--fonte-3xg);
+  font-size: 4rem;
   font-weight: var(--peso-negrito);
   color: var(--primaria);
   position: relative;
@@ -112,53 +91,8 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
-}
-
-.image-container {
-  position: relative;
   width: 350px;
   height: 450px;
-}
-
-.about-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-grande);
-  box-shadow: var(--sombra-pesada);
-  position: relative;
-  z-index: var(--z-cima);
-}
-
-.image-decoration {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.decoration-shape {
-  position: absolute;
-  background: var(--secundaria);
-  border-radius: var(--radius);
-}
-
-.decoration-1 {
-  width: 80px;
-  height: 80px;
-  top: -20px;
-  right: -20px;
-  animation: float 3s ease-in-out infinite;
-}
-
-.decoration-2 {
-  width: 60px;
-  height: 60px;
-  bottom: -15px;
-  left: -15px;
-  animation: float 3s ease-in-out infinite 1.5s;
 }
 
 .about-text {
@@ -166,7 +100,7 @@ export default {
 }
 
 .about-subtitle {
-  font-size: var(--fonte-2xg);
+  font-size: 2.5rem;
   font-weight: var(--peso-negrito);
   color: var(--primaria);
   margin-bottom: var(--espaco-p);
@@ -177,14 +111,14 @@ export default {
 }
 
 .about-role {
-  font-size: var(--fonte-xg);
+  font-size: 1.75rem;
   font-weight: var(--peso-medio);
   color: var(--preto);
   margin-bottom: var(--espaco-2xg);
 }
 
 .about-location {
-  font-size: var(--fonte-m);
+  font-size: 1.25rem;
   color: var(--cinza);
   margin-bottom: var(--espaco-xg);
 }
@@ -194,38 +128,10 @@ export default {
 }
 
 .about-description p {
-  font-size: var(--fonte-m);
+  font-size: 1.25rem;
   line-height: 1.7;
   color: var(--cinza);
   margin-bottom: var(--espaco-m);
-}
-
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--espaco-g);
-  margin-bottom: var(--espaco-2xg);
-  padding: var(--espaco-xg) 0;
-  border-top: 1px solid var(--borda);
-  border-bottom: 1px solid var(--borda);
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-number {
-  display: block;
-  font-size: var(--fonte-2xg);
-  font-weight: var(--peso-negrito);
-  color: var(--secundaria);
-  margin-bottom: var(--espaco-xp);
-}
-
-.stat-label {
-  font-size: var(--fonte-p);
-  color: var(--cinza);
-  font-weight: var(--peso-medio);
 }
 
 .about-actions {
@@ -239,7 +145,7 @@ export default {
   padding: var(--espaco-m) var(--espaco-2xg);
   border: none;
   border-radius: var(--radius);
-  font-size: var(--fonte-m);
+  font-size: 1.25rem;
   font-weight: var(--peso-medio);
   cursor: pointer;
   transition: var(--transicao-media);
@@ -266,54 +172,77 @@ export default {
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-}
-
 /* Responsive Design */
-@media (max-width: 768px) {
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: var(--espaco-2xg);
-    text-align: center;
-  }
-  
-  .image-container {
-    width: 280px;
-    height: 360px;
-  }
-  
-  .about-stats {
-    grid-template-columns: 1fr;
-    gap: var(--espaco-m);
-  }
-  
-  .about-actions {
-    justify-content: center;
-  }
-}
 
-@media (max-width: 480px) {
+/* Tablet (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .about-container {
+    padding: 0 var(--espaco-xg);
+  }
+  
   .section-title {
     font-size: var(--fonte-2xg);
-  }
-  
-  .image-container {
-    width: 250px;
-    height: 320px;
   }
   
   .about-subtitle {
     font-size: var(--fonte-xg);
   }
+}
+
+/* Mobile (até 767px) */
+@media (max-width: 767px) {
+  .about-section {
+    padding: var(--espaco-xg) 0;
+  }
+  
+  .about-container {
+    padding: 0 var(--espaco-m);
+  }
+  
+  .section-header {
+    margin-bottom: var(--espaco-xg);
+  }
+  
+  .section-title {
+    font-size: var(--fonte-3xg);
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--espaco-xg);
+    text-align: center;
+  }
+  
+  .about-image {
+    width: 280px;
+    height: 360px;
+    margin: 0 auto;
+  }
+  
+  .about-subtitle {
+    font-size: var(--fonte-2xg);
+  }
+  
+  .about-role {
+    font-size: var(--fonte-g);
+  }
+  
+  .about-location {
+    font-size: var(--fonte-m);
+  }
+  
+  .about-description p {
+    font-size: var(--fonte-g);
+  }
   
   .btn-download {
     width: 100%;
+    justify-content: center;
+    font-size: var(--fonte-m);
+    padding: var(--espaco-m) var(--espaco-xg);
+  }
+  
+  .about-actions {
     justify-content: center;
   }
 }

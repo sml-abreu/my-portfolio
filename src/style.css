@@ -115,10 +115,16 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 70%;
     scroll-behavior: smooth;
     text-size-adjust: 100%;
+}
 
+/* Aumentar fonte base no mobile */
+@media (max-width: 767px) {
+    html {
+        font-size: 85%;
+    }
 }
 
 body {

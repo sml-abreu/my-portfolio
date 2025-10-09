@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue';
-import HeroAboutSection from './components/HeroAboutSection.vue';
+import HeroSection from './components/HeroSection.vue';
 import AboutMe from './components/AboutMe.vue';
 import Experience from './components/Experience.vue';
 </script>
@@ -8,7 +8,7 @@ import Experience from './components/Experience.vue';
 <template>
     <div class="app">
         <NavBar />
-        <HeroAboutSection />
+        <HeroSection />
         <AboutMe />
         <Experience />
     </div>
