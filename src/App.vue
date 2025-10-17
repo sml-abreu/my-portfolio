@@ -3,6 +3,7 @@ import NavBar from './components/NavBar.vue';
 import HeroSection from './components/HeroSection.vue';
 import AboutMe from './components/AboutMe.vue';
 import Experience from './components/Experience.vue';
+import BackToTop from './components/BackToTop.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import Experience from './components/Experience.vue';
         <HeroSection />
         <AboutMe />
         <Experience />
+        <BackToTop />
     </div>
 </template>
 

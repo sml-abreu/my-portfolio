@@ -7,7 +7,7 @@
       
       <div class="about-content">
         <div class="about-image">
-          <img src="/about-photo.jpg" alt="Sobre mim" class="about-photo" />
+          <img src="/about-photo.png" alt="Sobre mim" class="about-photo" />
         </div>
         
         <div class="about-text">
@@ -53,11 +53,12 @@ export default {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--espaco-2xg);
+  margin-bottom: calc(var(--espaco-2xg) * 3);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--espaco-2xg);
+  margin-bottom: calc(var(--espaco-2xg) * 3);
 }
 
 .section-title {
@@ -82,21 +83,34 @@ export default {
 
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--espaco-3xg);
   align-items: center;
+  justify-items: center;
 }
 
 .about-image {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 350px;
-  height: 450px;
+  width: 500px;
+  height: 375px;
+  border-radius: var(--radius-grande);
+  overflow: hidden;
+  background: var(--cinza-transparente);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-grande);
 }
 
 .about-text {
   animation: slideInRight 1s ease-out;
+  max-width: 600px;
+  width: 100%;
 }
 
 .about-subtitle {
@@ -214,8 +228,8 @@ export default {
   }
   
   .about-image {
-    width: 280px;
-    height: 360px;
+    width: 320px;
+    height: 240px;
     margin: 0 auto;
   }
   

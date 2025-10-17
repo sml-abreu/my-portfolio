@@ -24,7 +24,7 @@
             </div>
             <div class="profile-image">
               <!-- Placeholder para sua foto -->
-              <img src="/profile-placeholder.jpg" alt="Profile" class="profile-img" />
+              <img src="/profile-placeholder.png" alt="Profile" class="profile-img" />
             </div>
           </div>
         </div>

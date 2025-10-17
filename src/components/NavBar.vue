@@ -18,8 +18,8 @@
     <transition name="fade-menu">
       <nav v-if="isMenuOpen" class="navigation-menu">
         <ul class="menu-items">
-          <li class="menu-item" :style="{ animationDelay: '0.1s' }"><a href="#sobre">Sobre Mim</a></li>
-          <li class="menu-item" :style="{ animationDelay: '0.2s' }"><a href="#experiencia">Experiência</a></li>
+          <li class="menu-item" :style="{ animationDelay: '0.1s' }"><a href="#sobre" @click="scrollToSection">Sobre Mim</a></li>
+          <li class="menu-item" :style="{ animationDelay: '0.2s' }"><a href="#experiencia" @click="scrollToSection">Experiência</a></li>
         </ul>
       </nav>
     </transition>
@@ -309,6 +309,28 @@ export default {
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen
+    },
+    scrollToSection(event) {
+      event.preventDefault()
+      const targetId = event.target.getAttribute('href')
+      const targetElement = document.querySelector(targetId)
+      
+      if (targetElement) {
+        // Offset da navbar fixa + espaçamento adicional
+        const navbarHeight = 80 // altura aproximada da navbar
+        const extraOffset = 60 // espaçamento adicional para compensar o margin-bottom do AboutMe
+        const offset = navbarHeight + extraOffset
+        
+        const targetPosition = targetElement.offsetTop - offset
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        })
+        
+        // Fecha o menu após clicar
+        this.isMenuOpen = false
+      }
     }
   }
 }
